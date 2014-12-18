@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*
+ * Bootstrap Image Gallery Demo CSS 3.0.0
+ * https://github.com/blueimp/Bootstrap-Image-Gallery
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+body {   
+    background: #222;
+	font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+a {
+    color: orange;
+}
+a:hover {
+    color: lightblue;
+    text-decoration: none;
+}
+.modal {
+	overflow: auto;
+	color: #333;
+}
+.panel-transparent {
+	background: none;
+position:fixed;
+bottom:10px;
+right:10px;
+}
+
+.panel-transparent .panel-heading{
+   
+}
+.panel-transparent .panel-body{
+    background: rgba(46, 51, 56, 0.2)!important;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.navbar-default.transparent {
+	background-color: transparent;
+}
+.slide1, .slide2, .slide3 {
+	min-height: 360px; /* Must have a height or min-height set due to use of background images */
+	background-size: cover;
+	background-position: center center;
+}
+.slide1 {
+	background-image: url(https://farm8.staticflickr.com/7371/10167488426_91b50b72eb_k.jpg);
+}
+.slide2 {
+	background-image: url(https://farm8.staticflickr.com/7397/10167413604_97de695958_k.jpg);
+}
+.slide3 {
+	background-image: url(10167425644_fab2ef05b7_k.jpg);
+}
+/* Carousel Fade Effect */
+.carousel.carousel-fade .item {
+	-webkit-transition: opacity 1s linear;
+	-moz-transition: opacity 1s linear;
+	-ms-transition: opacity 1s linear;
+	-o-transition: opacity 1s linear;
+	transition: opacity 1s linear;
+	opacity: .5;
+}
+.carousel.carousel-fade .active.item {
+	opacity: 1;
+}
+.carousel.carousel-fade .active.left,
+.carousel.carousel-fade .active.right {
+	left: 0;
+	z-index: 2;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+/* Carousel Overlay */
+.carousel-overlay {
+	position: absolute;
+	bottom: 100px;
+	right: 0;
+	left: 0;
+}
+
+/****************************/
+/*                          */
+/*Styles below just for Demo*/
+/*                          */
+/****************************/
+.navbar-default .navbar-brand {
+	color: rgba(255,255,255,1);
+	text-shadow: 0px 0px 2px #000000;
+	font-size:20px;
+}
+.navbar-default .navbar-brand:hover {
+	color: rgba(255,255,255,1); 
+	text-shadow: 0px 0px 2px #FFFF00;  
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #000;
+    background-color: rgba(0,180,0,.5);
+    
+}
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+	border-radius: 4px;
+    padding: 10px 15px;
+    margin: 5px 0px;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    background-color: rgba(0,180,0,.25);
+}
+.navbar-collapse.in {
+    background-color: rgba(255,255,255,.5);
+}
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: rgba(0,180,0,.5);
+}
+.navbar-toggle {
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+.carousel-overlay {
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+}
+.carousel-overlay h1 {
+    font-size: 3.5em;
+}
+.carousel-overlay .btn {
+	border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid #398439;
+    border-radius: 6px;
+}
+.carousel-overlay .btn-lg {
+    font-size: 1.75em;
+    padding: 10px 30px;
+}
+.circles {
+	margin-top: 20px;
+    background-color: #398439;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 3em;
+    width: 3em;
+    height: 3em;
+}
+.featurette-image {
+    display: block;
+    margin: auto;
+}
+
+/*
+SOCIAL
+*/
+
+    /*This style is needed only for the plugin demo page. Do not use it in your projects*/
+   
+    h1{
+        font-weight: 100;
+        font-size: 70px;
+    }
+    h2{
+        line-height: 24px;
+        font-weight: 100;
+    }
+    a{color: #ccc;}
+    a.btn {
+        text-decoration: none;
+        border: 1px solid #fff;
+        padding: 8px 11px;
+        border-radius: 5px;
+        transition: 0.25s;
+        -webkit-backface-visibility: hidden;
+    }
+    a.btn.btn-primary{
+        font-weight: 200;
+        border-width: 2px;
+        padding: 7px 10px;
+    }
+    a.btn:hover {
+        color:rgba(0, 50, 150, 0.5);
+        text-decoration: none;
+        background-color:#fff;
+    }
+    hr{
+        opacity:0.4;
+        border-color: #fff;
+        border-bottom: none;
+    }
+    .container {}
+    .social-feed-container{
+		width:100%;
+	}
+	
+	.footer-wrapper{
+	position:relative;
+	bottom:0;width:100%;
+	height:20px;
+	z-index: 10;
+	sbackground-color: rgba(0, 0, 0, 0.3);
+	padding:0px 200px 0px 20px;font-weight: 300;}
+	.scroll-top {
+   position:fixed;
+   bottom:0;
+   right:6%;
+   z-index:100;
+   background: green;
+   font-size:24px;
+   border-top-left-radius:3px;
+   border-top-right-radius:3px;
+}
+.scroll-top a:link,.scroll-top a:visited {
+  color:#222;
+} 
+	.footer{ font-size:13px;color:#eee;}
+	.footer-link-separator{border-right:1px solid;height:10px;margin-top:4px;margin-right:10px;margin-left:10px}
+.footer>.nav>span{float:right;padding-right:5px}
+.footer>.nav>span:first-child{padding-right:0}
